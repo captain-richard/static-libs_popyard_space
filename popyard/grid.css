@@ -1,0 +1,71 @@
+.grid {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: dense;
+  -ms-grid-columns: (calc((100vw - 31px) / 30))[30];
+	grid-template-columns: repeat(30, calc((100vw - 31px) / 30));
+  grid-auto-rows: calc((100vw - 31px) / 30);
+  grid-gap: 1px;
+  padding: 1px;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    -ms-grid-columns: (calc((100vw - 21px) / 20))[20];
+        grid-template-columns: repeat(20, calc((100vw - 21px) / 20));
+    grid-auto-rows: calc((100vw - 21px) / 20);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    -ms-grid-columns: (calc((100vw - 11px) / 10))[10];
+        grid-template-columns: repeat(10, calc((100vw - 11px) / 10));
+    grid-auto-rows: calc((100vw - 11px) / 10);
+  }
+}
+
+.grid .grid-item {
+  padding: 0px;
+  position: relative;
+  background: #ccc;
+}
+
+.grid .grid-item:nth-child(1) {
+  grid-column: span 6;
+  grid-row: span 6;
+}
+
+.grid .grid-item:nth-child(2) {
+  grid-column: span 5;
+  grid-row: span 5;
+}
+
+.grid .grid-item:nth-child(3) {
+  grid-column: span 4;
+  grid-row: span 4;
+}
+
+.grid .grid-item:nth-child(4) {
+  grid-column: span 3;
+  grid-row: span 3;
+}
+
+.grid .grid-item:nth-child(5) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.grid img {
+  width: 100%;
+  height: 100%;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  cursor: pointer;
+  -o-object-fit: cover;
+      object-fit: cover;
+  -webkit-transform-origin: center;
+      -ms-transform-origin: center;
+          transform-origin: center;
+}
