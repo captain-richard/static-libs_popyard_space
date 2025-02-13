@@ -167,7 +167,6 @@ div.imageBar{
 	*/
 }
 
-
 .flex-wrap-container {
 	display: flex;
 	flex-wrap: wrap;
@@ -399,5 +398,10 @@ div.forum-chain-bar{
 .lightgray_link:hover {
 	color: red; 
 	/* background-color: red; */
+}
+
+.div-google-responsive-90 {
+    max-height: 90px !important;
+    overflow: hidden;
 }
 
